@@ -1,0 +1,257 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 119, 245, 0.07);
+}
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.header h1 {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  letter-spacing: 0.1em;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  font-weight: 900;
+  left: 6%;
+  top: 12px;
+  font-size: 25px;
+  color: #333333;
+}
+.header .sidebar button {
+  position: absolute;
+  top: 32px;
+  font-family: "Roboto";
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  border: 0;
+  outline: 0;
+  background: none;
+}
+.header .sidebar .work {
+  left: 73%;
+}
+.header .sidebar .resume {
+  left: 78%;
+}
+.header .sidebar .hire {
+  left: 84.5%;
+}
+.header .sidebar .moon {
+  left: 91.2%;
+}
+.header .sidebar .moon svg {
+  width: 20px;
+  height: 15px;
+}
+.notHeader {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  bottom: 0;
+}
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.notHeader .work {
+  background-color: #d8e4fa;
+  height: 350px;
+}
+.notHeader .work .text {
+  background: none;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+}
+.notHeader .work .text span {
+  font-size: 40px;
+}
+.notHeader .work .chat {
+  position: relative;
+  border: 0;
+  outline: 0;
+  padding: 15px 18px 15px 18px;
+  top: 20px;
+  text-transform: uppercase;
+  background: #2977f5;
+  font-weight: bold;
+  font-size: 10px;
+  align-items: center;
+  letter-spacing: 0.04em;
+  font-family: "Inter";
+  color: #ffffff;
+}
+.notHeader .info {
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+.notHeader .info .help {
+  margin-left: 50px;
+}
+.notHeader .info .help .question,
+.notHeader .info .help .answer {
+  font-family: "Roboto";
+  letter-spacing: 0.04em;
+  font-style: normal;
+  font-weight: normal;
+}
+.notHeader .info .help .question { 
+  font-size: 12px;
+  color: #555555;
+}
+.notHeader .info .help .answer {
+  font-size: 15px;
+  color: #000000;
+}
+.notHeader .info .images .img1 {
+  position: relative;
+  left: 562px;
+}
+.notHeader .info .images .img2 {
+  position: relative;
+  top: 1px;
+  left: 571px;
+}
+.notHeader .info .images .img3 {
+  position: relative;
+  left: 585px;
+}
+.notHeader .info .images .img4 {
+  position: relative;
+  left: 600px;
+}
+.notHeader .container {
+  position: relative;  
+  top: 10%;
+  height: 40%;
+}
+.notHeader .container .description {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  margin-left: 6.22vw;
+  width: 200px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.1);
+}
+.notHeader .container .description .image .img5 {
+  position: relative;
+  left: 20px;
+  top: 30px;
+}
+.notHeader .container .description .title {
+  position: relative;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.04em;
+  top: 50px;
+  left: 20px;
+}
+.notHeader .container .description .text {
+  position: relative;
+  font-family: "IBM Plex Sans";
+  font-size: 13px;
+  padding-right: 25px;
+  color: #989696;
+  letter-spacing: 0.04em;
+  top: 65px;
+  left: 20px;
+}
+.notHeader .newsletter {
+  position: relative;
+  align-items: center;
+  top: 25%;
+  height: 40%;
+  background: #d8e4fa;
+  margin-bottom: 10%;
+}
+.notHeader .newsletter .title,
+.notHeader .newsletter .title > * {
+  font-family: "Roboto";
+  text-align: center;
+  font-size: 30px;
+  color: #333333;
+  letter-spacing: 0.04em;
+}
+.notHeader .newsletter .title {
+  position: relative;
+  top: 20px;
+}
+.notHeader .newsletter .email-container {
+  display: flex;
+  background-color: #f0f5fe;
+  position: relative;
+  width: 50%;
+  left: 25%;
+  height: 40%;
+  top: 40px;
+}
+.notHeader .newsletter .email-container .email {
+  flex: 1;
+  position: relative;
+  left: 5%;
+  top: 40%;
+  font-family: "Roboto";
+  font-style: normal;
+  letter-spacing: 0.04em;
+  color: #777777;
+}
+.notHeader .newsletter .email-container .subscribe {
+  flex: 1;
+  position: relative;
+  top: 10%;
+  width: 70%;
+  height: 80%;
+  right: 3%;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: "Roboto";
+  color: white;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  background: #2977f5;
+}
+.notHeader .footer {
+  position: absolute;
+  top: 192%;
+  align-items: center;
+  line-height: 10px;
+  left: 35%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+}
+.notHeader .footer .blue {
+  color: #2977F5;
+}
+.notHeader .footer .strikethrough {
+  text-decoration: line-through;
+}
+.notHeader .footer .three {
+  color: red;
+}
+.notHeader .footer .three::before {
+  content: "<";
+}
