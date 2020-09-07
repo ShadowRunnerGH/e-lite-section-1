@@ -73,12 +73,6 @@ for (let i in apartmentArr) {
     `;
     apartments.appendChild(apartment);
 }
-let apt = document.getElementsByClassName('apartment');
-for(let i in apt) {
-    if((i+1) % 3 === 0) {
-        apt[i].style.marginLeft = 0;
-    }
-}
 // Searching apartment
 function searchApartment() {
     let input = document.getElementById('searchBar').value.toLowerCase();
