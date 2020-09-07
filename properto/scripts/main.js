@@ -77,7 +77,6 @@ let apt = document.getElementsByClassName('apartment');
 for(let i in apt) {
     if((i+1) % 3 === 0) {
         apt[i].style.marginLeft = 0;
-        console.log(apt[i].style.marginLeft);
     }
 }
 // Searching apartment
