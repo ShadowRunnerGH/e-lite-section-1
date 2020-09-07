@@ -1,59 +1,96 @@
-var openModalButtons = document.querySelectorAll('[data-modal-target]');
-var closeModalButtons = document.querySelectorAll('[data-close-button]');
-var overlay = document.getElementById('overlay');
-var icons = document.getElementsByClassName('icon');
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        var modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
-})
-overlay.addEventListener('click', () => {
-    var modals = document.querySelectorAll('.modal.active')
-    modals.forEach(modal => {
-        closeModal(modal)
-    })
-})
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        var modal = button.closest('.modal')
-        closeModal(modal)
-    })
-})
-function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-}
-function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-}
-function searchApartment() {
-    var apartments = document.getElementsByClassName("apartment");
-    var names = document.getElementsByClassName("name");
-    var addresses = document.getElementsByClassName("address");
-    var input = document.getElementById("searchBar").value;
-    var ipt = input.toLowerCase();
-    for (i = 0; i < names.length; i++) {
-        if (!names[i].innerHTML.toLowerCase().includes(ipt) && !addresses[i].innerHTML.toLowerCase().includes(ipt)) {
-            apartments[i].style.display = "none";
-        } else {
-            apartments[i].style.display = "";
+// Filter accordion
+let icons = document.getElementsByClassName('icons');
+for (let i = 0; i < icons.length; i++) {
+    icons[i].onclick = function () {
+        let content = this.nextElementSibling;
+        if (this.innerHTML === '+') {
+            this.innerHTML = '×';
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else if (this.innerHTML === '×') {
+            this.innerHTML = '+';
+            content.style.maxHeight = 0;
         }
     }
 }
-for (var k = 0; k < icons.length; k++) {
-    icons[k].onclick = function () {
-        var content = this.nextElementSibling;
-        if (this.innerHTML === "+") {
-            this.innerHTML = "×";
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-        else if (this.innerHTML === "×") {
-            this.innerHTML = "+";
-            content.style.maxHeight = null;
+// Apartment section filling
+let apartmentArr = [
+    {
+        src: 'images/apartment1.png',
+        name: 'Alps Apartments',
+        address: 'Vasant Kunj, New Delhi'
+    },
+    {
+        src: 'images/apartment2.png',
+        name: 'Bluebells Apartments',
+        address: 'Sector 34, Greater Noida'
+    },
+    {
+        src: 'images/apartment3.png',
+        name: 'Cheddar Apartments',
+        address: 'Vasant Vihar, New Delhi'
+    },
+    {
+        src: 'images/apartment4.png',
+        name: 'Deerhill Apartments',
+        address: 'Dwarka, New Delhi'
+    },
+    {
+        src: 'images/apartment5.png',
+        name: 'Elm Apartments',
+        address: 'Borivali, Mumbai'
+    },
+    {
+        src: 'images/apartment6.png',
+        name: 'Fern Apartments',
+        address: 'Gurugram, Haryana'
+    },
+    {
+        src: 'images/apartment7.png',
+        name: "Godric's hollow",
+        address: 'West Country, England'
+    },
+    {
+        src: 'images/apartment8.png',
+        name: 'Hill Apartments',
+        address: 'Anna Nagar, Chennai'
+    },
+    {
+        src: 'images/apartment9.png',
+        name: 'Ivy Apartments',
+        address: 'Alur, Bengaluru'
+    }
+]
+let apartments = document.getElementById("apartments");
+for (let i in apartmentArr) {
+    let apartment = document.createElement('div');
+    apartment.className = 'apartment';
+    apartment.innerHTML = `
+    <img src='${apartmentArr[i].src}'/>
+    <h3 class="name">${apartmentArr[i].name}</h3>
+    <h6 class="address">${apartmentArr[i].address}</h6>
+    <a class="more">More <span class="arrow">-></span></a>
+    <button class="material-icons bIcon" onclick="fillbookmark()">bookmark_border</button>
+    `;
+    apartments.appendChild(apartment);
+}
+let apt = document.getElementsByClassName('apartment');
+for(let i in apt) {
+    if((i+1) % 3 === 0) {
+        apt[i].style.marginLeft = 0;
+        console.log(apt[i].style.marginLeft);
+    }
+}
+// Searching apartment
+function searchApartment() {
+    let input = document.getElementById('searchBar').value.toLowerCase();
+    let names = document.getElementsByClassName('name');
+    let addresses = document.getElementsByClassName('address');
+    let apartments = document.getElementsByClassName('apartment');
+    for (let i in names) {
+        if (!names[i].innerHTML.toLowerCase().includes(input) && !addresses[i].innerHTML.toLowerCase().includes(input)) {
+            apartments[i].style.display = 'none';
+        } else {
+            apartments[i].style.display = 'block';
         }
     }
 }

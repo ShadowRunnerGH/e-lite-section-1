@@ -1,464 +1,216 @@
-* {
-  box-sizing: border-box;
+@keyframes move {
+  0% {
+    padding-left: 0px;
+    opacity: 1;
+  }
+  90% {
+    padding-left: 10px;
+    opacity: 0;
+  }
+  100% {
+    padding-left: 10px;
+    opacity: 0;
+  }
 }
-body,
-html {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
+body {
+  margin: 25px auto;
+  width: 1170px;
 }
-h5 {
-  position: absolute;
-  left: 8%;
-  top: -3%;
-  font-family: "Prompt";
-  font-weight: normal;
-  font-size: 2.2vw;
-  line-height: 1vh;
-  text-align: center;
-  color: black;
-}
-.btn {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  left: 77.5vw;
-  top: 2.5%;
-  border-radius: 12.5px;
-  border: none;
-  outline: none;
-  color: white;
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, #333333 50%, black 50%);
-  -webkit-transition: background-position 500ms;
-  -moz-transition: background-position 500ms;
-  transition: background-position 500ms;
-}
-.sign {
-  position: absolute;
-  width: 5%;
-  left: 80vw;
-  height: 5%;
-  top: 2%;
-  font-family: "Inter";
-  font-size: 0.95vw;
-  border: none;
-  outline: none;
-  background: white;
-  color: #000000;
-}
-.log {
-  position: absolute;
-  background-size: 100% 200%;
-  width: 5%;
-  height: 5%;
-  left: 85.5vw;
-  top: 2%;
-  font-size: 0.95vw;
-  font-family: "Inter";
-  background-image: linear-gradient(to bottom, #333333 50%, black 50%);
-  border: none;
-  outline: none;
-  color: white;
-  border-radius: 71px;
-  -webkit-transition: background-position 500ms;
-  transition: background-position 500ms;
-}
-.sign:hover {
-  cursor: pointer;
-  background: #000000;
-  color: white;
-  transition: linear 300ms;
-  border-radius: 71px;
-  text-decoration: underline;
-}
-.btn:hover,
-.log:hover {
-  border: none;
-  outline: none;
-  background-position: 0 -100%;
-  color: white;
-  background-color: #333333;
-  cursor: pointer;
-}
-.search {
-  position: relative;
-  margin-left: 5%;
-  padding-bottom: 4%;
-  display: block;
-  width: 90%;
-}
-.search .text {
-  border-radius: 2px;
-  border: 1px solid gainsboro;
-  padding: 11px 75px 10px 50px;
-  width: 100%;
-  outline: none;
-  font-family: "Inter", sans-serif;
-  font-size: 1.17vw;
-}
-.search .text:hover {
-  border-color: silver;
-}
-.search .text:focus {
-  background-color: #fafafa;
-}
-.search .text select {
-  border-radius: 2px;
-  outline: none;
-  font-family: "Inter", sans-serif;
-  font-size: 1.17vw;
-}
-.search select:hover {
-  border-color: silver;
-}
-.search select:focus {
-  border-color: #f44436;
-}
-.search i.material-icons {
-  position: absolute;
-  top: 10px;
-  transform: translateX(10px);
-  z-index: 2;
-  color: #aaa;
-}
-.lbl {
-  font-family: "Inter";
-  font-size: 1.02vw;
-}
-.search .check {
-  transform: translateY(1.2px);
-}
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 1px solid gainsboro;
-  z-index: 10;
-  background-color: white;
-  width: 30%;
-}
-.modal.active {
-  transform: translate(-50%, -60%) scale(1);
-}
-.modal:hover {
-  border-color: silver;
+button,
+a {
+  cursor: pointer !important;
+  outline: none !important;
+  border: none !important;
 }
 .header {
-  padding-top: 1%;
-  padding-left: 5%;
-  padding-right: 5%;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Prompt";
   display: flex;
 }
-.header .title {
-  font-size: 1.25rem;
-  font-weight: bold;
+.header h3 {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-.close {
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  color: #ccc;
-  font-weight: bold;
+.header .buttons {
+  margin-left: 812px;
+  margin-top: 7px;
 }
-.close:hover {
-  cursor: pointer;
-  color: #000000;
-}
-.signBtn {
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, #333333 50%, black 50%);
-  color: white;
+.header .buttons button {
   font-family: "Inter";
-  border: none;
-  font-size: 1.1vw;
-  width: 100%;
-  height: 50px;
-  border-radius: 2px;
-  outline: none;
+  margin-right: 10px;
+}
+.header .buttons .number,
+.header .buttons .log-in {
+  background: #222222;
+  background-size: 100% 200%;
+  color: #ffffff;
+  font-size: 15px;
+  background-image: linear-gradient(to bottom, #444444 50%, black 50%);
   -webkit-transition: background-position 500ms;
-  -moz-transition: background-position 500ms;
   transition: background-position 500ms;
 }
-.signBtn:hover {
-  border: none;
-  outline: none;
+.header .buttons .sign-up {
+  background: none;
+  font-size: 15px;
+  transition: all 500ms;
+}
+.header .buttons .number {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.header .buttons .log-in,
+.header .buttons .sign-up {
+  border-radius: 70px;
+  width: 80px;
+  height: 35px;
+}
+.header .buttons .number:hover,
+.header .buttons .log-in:hover {
   background-position: 0 -100%;
-  color: white;
-  background-color: #333333;
-  cursor: pointer;
 }
-.property {
-  position: relative;
-  width: 83.5%;
-  height: 45%;
-  left: 8%;
-  top: 10%;
-  background: #5628d2;
-  border-radius: 26.5px;
-}
-.property h3 {
-  position: absolute;
-  left: 8%;
-  top: 5%;
-  font-style: normal;
-  font-weight: normal;
-  font-family: "Prompt";
-  color: white;
-  font-size: 1.83vw;
-}
-.property p {
-  position: absolute;
-  left: 8%;
-  top: 40%;
-  font-style: normal;
-  font-weight: normal;
-  font-family: "Inter";
-  color: white;
-  font-size: 1.17vw;
-}
-.property a {
-  position: absolute;
-  left: 8%;
-  top: 75%;
-  padding: 0;
-  color: white;
-  background: none;
-  border: none;
-  text-decoration: none;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: bold;
-  outline: none;
-  font-size: 1.17vw;
-}
-.property a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.property .img {
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.filter {
-  position: absolute;
-  left: 8%;
-  top: 62%;
-  width: 15%;
-  font-family: "Inter";
-}
-.filter .row .text {
-  flex: 1;
-  font-size: 1.24vw;
-  font-weight: bold;
-}
-.filter .row .icon {
-  border: none;
-  outline: none;
-  background: none;
-  font-weight: bold;
-  font-size: 1.46vw;
-  color: #5628d2;
-}
-.filter .row .icon:hover {
-  cursor: pointer;
-}
-.filter .subsection {
-  transition: 500ms ease;
-  padding-bottom: 5px;
-}
-.filter .subsection .section .sub-text {
-  font-family: "Inter";
-  font-weight: normal;
-  font-size: 0.81vw;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  color: #444;
-}
-.filter .row .subsection .section .sub-icon .check-icon {
-  position: relative;
-  left: 180px;
-  top: -22px;
-  width: 18px;
-  padding: 0px;
-  margin: 0 0 -7px 0;
-  background-color: #5628d2;
-  border-radius: 100px;
+.header .buttons .sign-up:hover {
+  background: #000000;
   color: white;
 }
-.row {
+.info-content {
   display: flex;
-  width: 100%;
+  margin-top: 30px;
+  height: 380px;
+  background-color: #5628d2;
+  border-radius: 38px;
+}
+.info-content .info-text {
+  margin-top: 85px;
+  margin-left: 90px;
+  flex: 0 0 230px;
+  color: #ffffff;
+  font-family: "Inter";
+}
+.info-content .info-text h2 {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: normal;
+}
+.info-content .info-text a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+a:hover .arrow {
+  animation: move 1s infinite;
+}
+.info-content img {
+  margin-left: 164.5px;
+}
+.bottom-container {
+  display: flex;
   flex-wrap: wrap;
 }
-.row .subsection {
+.filter {
+  width: 200px;
+  background: white;
+}
+.filter .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  font-family: "Inter";
+}
+.filter .row h3 {
+  flex: 0 0 150px;
+}
+.filter .row .icons {
+  flex: 1;
+  background: none;
+  padding: 0px;
+  height: 18px;
+  margin-top: 18px;
+  color: #5628d2;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.filter .row .subsection {
   display: flex;
   flex-wrap: wrap;
   max-height: 0;
+  margin-top: -25px;
   overflow: hidden;
+  transition: max-height 500ms ease;
 }
-.row .subsection .section {
+.filter .row .subsection .sub-text {
   display: block;
-  line-height: 10px;
+  line-height: 1px;
   width: 100%;
+  color: #333333;
+  font-size: 0.7rem;
 }
-.filter .row .icon::after {
-  position: relative;
-  top: 0;
-  font-size: 0.73vw;
-  left: 5px;
+.filter .row .subsection .sub-text:first-child {
+  padding-top: 8px;
 }
-.filter .row .icon:hover,
-.filter .subsection .section .sub-icon:hover {
-  cursor: pointer;
+.filter .row .subsection .sub-text:last-child {
+  padding-bottom: 15px;
 }
-.searchBar input {
-  position: absolute;
-  padding: 1.6%;
-  left: 29.25%;
-  top: 62%;
-  width: 40%;
+.search {
+  width: 930px;
+  margin-left: 40px;
+  margin-top: 13px;
+}
+.search .searchBar {
   font-family: "Inter";
   font-style: normal;
   font-weight: bold;
-  height: 30px;
   background-color: rgba(86, 40, 210, 0.1);
-  border-radius: 8px;
   border: none;
   outline: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 550px;
 }
-.searchBar input::placeholder {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.sort .sortBtn {
-  position: absolute;
-  padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
-  top: 62%;
-  left: 78%;
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, #333333 50%, black 50%);
-  border: none;
-  outline: none;
-  color: white;
-  border-radius: 70px;
+.search .searchBar::placeholder {
   font-family: "Inter";
-  -webkit-transition: background-position 500ms;
-  -moz-transition: background-position 500ms;
-  transition: background-position 500ms;
-}
-.sort .sortBtn::after {
-  content: "Newest";
+  font-style: normal;
   font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(51, 51, 51, 0.48);
 }
-.activeSortBtn::after {
-  content: "Oldest";
-  font-weight: bold;
-}
-.sort .sortBtn:hover {
-  border: none;
-  outline: none;
-  background-position: 0 -100%;
-  color: white;
-  background-color: #333333;
-  cursor: pointer;
-}
-.apartment-list {
+.apartments {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 68%;
-  position: absolute;
-  left: 25%;
-  top: 75%;
 }
-.apartment-list-sorted {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  width: 68%;
-  position: absolute;
-  left: 25%;
-  top: 75%;
+.apartments .apartment {
+  margin-right: 20px;
 }
-.apartment-list .apartment {
-  margin-left: 59px;
-}
-.apartment-list .apartment .image .img {
-  width: 240px;
-  height: auto;
-}
-.apartment-list .apartment .info {
+.apartments .apartment {
+  position: relative;
+  margin-top: 50px;
   font-family: "Inter";
-  font-weight: bold;
 }
-.apartment-list .apartment .info .name {
-  padding-top: 8px;
-  font-size: 0.88vw;
-}
-.apartment-list .apartment .info .address {
-  color: #777777;
-  padding-top: 5px;
-  font-size: 0.66vw;
-}
-.apartment-list .apartment .info .more {
-  background: none;
-  border: none;
-  outline: none;
-  padding: 0;
-  font-family: "Inter";
-  font-weight: bold;
-  text-transform: uppercase;
+.apartments .apartment h3 {
   margin-top: 8px;
-  margin-bottom: 20px;
-  font-size: 0.81vw;
+  margin-bottom: 0px;
+  font-size: 0.9rem;
 }
-.apartment-list .apartment .info .more:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.apartments .apartment h6 {
+  color: #777777;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-.apartment-list .apartment .info .info-row {
-  display: flex;
-  flex-direction: row;
+.apartments .apartment .more {
+  color: #333333;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.apartment-list .apartment .info .info-row .bookmark {
-  flex: 15;
+.apartments .apartment .material-icons.bIcon {
+  background: none;
   color: #5628d2;
-  transform: translateY(15px);
-  z-index: 2;
-}
-.apartment-list .apartment .info .info-row .bookmark .material-icons:hover {
-  cursor: pointer;
-  content: "bookmark";
-}
-.apartment-list .apartment .info .info-row .name {
-  flex: 100;
-}
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: none;
-  pointer-events: none;
-}
-#overlay.active {
-  opacity: 1;
-  cursor: default;
-  pointer-events: all;
+  position: absolute;
+  left: 240px;
+  bottom: 30px;
 }

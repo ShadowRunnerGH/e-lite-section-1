@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Prompt"
@@ -9,372 +12,92 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="icon" href="images/logo.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
     <title>Properto</title>
   </head>
   <body>
-    <div>
-      <h5>Properto</h5>
-      <button class="btn">1</button>
-      <button data-modal-target="#modal" class="sign">Sign up</button>
-      <button data-modal-target="#modal2" class="log">Log In</button>
+    <div class="header">
+      <h3>Properto</h3>
+      <span class="buttons">
+        <button class="number">1</button>
+        <button class="sign-up">Sign up</button>
+        <button class="log-in">Log in</button>
+      </span>
     </div>
-    <div class="modal" id="modal">
-      <div class="header">
-        <h3 class="title">Sign Up</h3>
-        <button data-close-button class="close">&times;</button>
+    <div class="info-content">
+      <div class="info-text">
+        <h2>The best property, for the best prices</h2>
+        <p>Find the house that you and your family deserve with properto.</p>
+        <a>Start today <span class="arrow">-></span></a>
       </div>
-      <div class="modal-body">
-        <div class="search">
-          <i class="material-icons">person</i>
-          <input class="text" placeholder="Full name" />
-        </div>
-        <div class="search">
-          <i class="material-icons">email</i>
-          <input class="text" type="email" placeholder="Email" />
-        </div>
-        <div class="search">
-          <i class="material-icons">lock</i>
-          <input class="text" type="password" placeholder="Password" />
-        </div>
-        <div class="search">
-          <input type="checkbox" class="check" />
-          <label for="checkbox" class="lbl">
-            Subscribe for emails related to discounts and other exciting offers
-          </label>
-        </div>
-        <div class="search">
-          <button class="signBtn">Sign Up</button>
-        </div>
-      </div>
+      <img src="images/cityscape.png" />
     </div>
-    <div class="modal" id="modal2">
-      <div class="header">
-        <h3 class="title">Log In</h3>
-        <button data-close-button class="close">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="search">
-          <i class="material-icons">email</i>
-          <input class="text" type="email" placeholder="Email" />
-        </div>
-        <div class="search">
-          <i class="material-icons">lock</i>
-          <input class="text" type="password" placeholder="Password" />
-        </div>
-        <div class="search">
-          <input type="checkbox" class="check" />
-          <label for="checkbox" class="lbl">
-            Remember me
-          </label>
-        </div>
-        <div class="search">
-          <button class="signBtn">Log In</button>
-        </div>
-      </div>
-    </div>
-    <div class="property">
-      <h3>The best property,<br />for the best prices</h3>
-      <p>
-        Find the home that you and<br />your family deserve with<br />properto
-      </p>
-      <a href="#searchBar">Start today &rarr;</a>
-      <img max-width="100%" class="img" src="images/cityscapes.png" />
-    </div>
-    <div class="filter">
-      <div class="row">
-        <div class="text">Filter By</div>
-        <button class="icon">+</button>
-        <div class="subsection">
-          <div class="section">
-            <div class="sub-text">Residential Apartments</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Land plots</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Independent houses</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Office Space</div>
+    <div class="bottom-container">
+      <div class="filter">
+        <div class="row">
+          <h3>Filter By</h3>
+          <button class="icons">+</button>
+          <div class="subsection">
+            <p class="sub-text">Residential Apartments</p>
+            <p class="sub-text">Land plots</p>
+            <p class="sub-text">Independent houses</p>
+            <p class="sub-text">Office Space</p>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="text">Price Range</div>
-        <button class="icon">+</button>
-        <div class="subsection">
-          <div class="section">
-            <div class="sub-text">40-60 lakh</div>
+        <div class="row">
+          <h3>Price Range</h3>
+          <button class="icons">+</button>
+          <div class="subsection">
+            <p class="sub-text">40 - 60 lakhs</p>
+            <p class="sub-text">60 lakh - 1 crore</p>
+            <p class="sub-text">1 - 3 crores</p>
+            <p class="sub-text">>3 crore</p>
           </div>
-          <div class="section">
-            <div class="sub-text">60 lakh - 1 crore</div>
+        </div>
+        <div class="row">
+          <h3>Select Areas</h3>
+          <button class="icons">+</button>
+          <div class="subsection">
+            <p class="sub-text">Gurgaon</p>
+            <p class="sub-text">Noida</p>
+            <p class="sub-text">Indirapuram</p>
+            <p class="sub-text">Delhi</p>
           </div>
-          <div class="section">
-            <div class="sub-text">1 crore - 3 crore</div>
+        </div>
+        <div class="row">
+          <h3>Amenities</h3>
+          <button class="icons">+</button>
+          <div class="subsection">
+            <p class="sub-text">Lawn</p>
+            <p class="sub-text">Gym</p>
+            <p class="sub-text">Built-in BBQ</p>
+            <p class="sub-text">Swimming pool</p>
           </div>
-          <div class="section">
-            <div class="sub-text">>3 crore</div>
+        </div>
+        <div class="row">
+          <h3>Sq Footage</h3>
+          <button class="icons">+</button>
+          <div class="subsection">
+            <p class="sub-text">200 - 400 sq foot</p>
+            <p class="sub-text">400 - 600 sq foot</p>
+            <p class="sub-text">600 - 700 sq foot</p>
+            <p class="sub-text">>700 sq foot</p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="text">Select Areas</div>
-        <button class="icon">+</button>
-        <div class="subsection">
-          <div class="section">
-            <div class="sub-text">Gurgaon</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Noida</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Indirapuram</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Delhi</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="text">Amenities</div>
-        <button class="icon">+</button>
-        <div class="subsection">
-          <div class="section">
-            <div class="sub-text">Lawn</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Gym</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Built-in BBQ</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">Swimming pool</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="text">Sq Footage</div>
-        <button class="icon">+</button>
-        <div class="subsection">
-          <div class="section">
-            <div class="sub-text">200-400 sq foot</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">400-600 sq foot</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">600-700 sq foot</div>
-          </div>
-          <div class="section">
-            <div class="sub-text">>700 sq foot</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="searchBar">
+      <div class="search">
         <input
+          class="searchBar"
           id="searchBar"
           type="text"
           placeholder="Search Here"
           onkeyup="searchApartment()"
         />
-      </div>
-      <div class="sort">
-        <button id="sortBtn" class="sortBtn">
-          Sort by:
-        </button>
-      </div>
-    </div>
-    <div class="apartment-list">
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment1.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Alps Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Vasant Kunj, New Delhi</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment2.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Blue bells Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon" onclick="fillbookmark()" \
-                >bookmark_border</i
-              >
-            </div>
-          </div>
-          <div class="address">Sector 34, Greater Noida</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment3.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Cheddar Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Vasant Vihar, New Delhi</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment4.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Deer hill Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Dwarka, New Delhi</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment5.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Elm Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Borivali, Mumbai</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment6.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Fern Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Gurugram, Haryana</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment7.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Godric's hollow</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">West Country, England</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment8.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Hill Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Anna Nagar, Chennai</div>
-          <button class="more">More -></button>
-        </div>
-      </div>
-      <div class="apartment">
-        <div class="image">
-          <img
-            max-width="100%"
-            class="img"
-            src="images/apartment9.png"
-            height="200px"
-          />
-        </div>
-        <div class="info">
-          <div class="info-row">
-            <div class="name">Ivy Apartments</div>
-            <div class="bookmark">
-              <i class="material-icons bIcon">bookmark_border</i>
-            </div>
-          </div>
-          <div class="address">Alur, Bengaluru</div>
-          <button class="more">More -></button>
+        <div id="apartments" class="apartments">
+          <!-- Filled using JS -->
         </div>
       </div>
     </div>
-    <div id="overlay"></div>
     <script src="scripts/main.js"></script>
   </body>
 </html>
