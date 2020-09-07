@@ -1,6 +1,6 @@
 // Filter accordion
 let icons = document.getElementsByClassName('icons');
-for (let i = 0; i < icons.length; i++) {
+for (let i in icons) {
     icons[i].onclick = function () {
         let content = this.nextElementSibling;
         if (this.innerHTML === '+') {
@@ -69,7 +69,7 @@ for (let i in apartmentArr) {
     <h3 class="name">${apartmentArr[i].name}</h3>
     <h6 class="address">${apartmentArr[i].address}</h6>
     <a class="more">More <span class="arrow">-></span></a>
-    <button class="material-icons bIcon" onclick="fillbookmark()">bookmark_border</button>
+    <button class="material-icons bIcon">bookmark_border</button>
     `;
     apartments.appendChild(apartment);
 }
@@ -85,5 +85,15 @@ function searchApartment() {
         } else {
             apartments[i].style.display = 'block';
         }
+    }
+}
+// Clicking on bookmark
+let bIcons = document.getElementsByClassName('bIcon');
+for(let i in bIcons) {
+    bIcons[i].onclick = function() {
+        if(this.innerHTML === 'bookmark_border')
+            this.innerHTML = 'bookmark';
+        else if(this.innerHTML === 'bookmark')
+            this.innerHTML = 'bookmark_border';
     }
 }
