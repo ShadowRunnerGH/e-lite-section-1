@@ -1,3 +1,4 @@
+let bIcons = document.getElementsByClassName('bIcon');
 // Filter accordion
 let icons = document.getElementsByClassName('icons');
 for (let i in icons) {
@@ -12,7 +13,7 @@ for (let i in icons) {
         }
     }
 }
-// Apartment section filling
+// Apartments section
 let apartmentArr = [
     {
         src: 'images/apartment1.png',
@@ -80,15 +81,13 @@ function searchApartment() {
     let addresses = document.getElementsByClassName('address');
     let apartments = document.getElementsByClassName('apartment');
     for (let i in names) {
-        if (!names[i].innerHTML.toLowerCase().includes(input) && !addresses[i].innerHTML.toLowerCase().includes(input)) {
+        if (!names[i].innerHTML.toLowerCase().includes(input) && !addresses[i].innerHTML.toLowerCase().includes(input) && bIcons[i].innerHTML === 'bookmark_border')
             apartments[i].style.display = 'none';
-        } else {
+        else
             apartments[i].style.display = 'block';
-        }
     }
 }
 // Clicking on bookmark
-let bIcons = document.getElementsByClassName('bIcon');
 for(let i in bIcons) {
     bIcons[i].onclick = function() {
         if(this.innerHTML === 'bookmark_border')
